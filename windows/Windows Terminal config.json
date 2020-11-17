@@ -67,6 +67,8 @@
     // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
     "schemes": [],
 
+    "fontFace": "MesloLGS NF",
+
     // Add custom keybindings to this array.
     // To unbind a key combination from your defaults.json, set the command to "unbound".
     // To learn more about keybindings, visit https://aka.ms/terminal-keybindings
