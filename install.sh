@@ -14,14 +14,6 @@ ApplicationsDir="/mnt/c/Users/$winUser/Applications"
 
 [ ! -d "$ApplicationsDir" ] && mkdir -p "$ApplicationsDir"
 
-cp -r ./windows/start_ssh ./windows/set_static_ip "$ApplicationsDir"
-
-# replace winUser
-sed -i "s/WINDOWS_USER/$winUser/g" $ApplicationsDir/start_ssh/sshd.vbs
-sed -i "s/WINDOWS_USER/$winUser/g" $ApplicationsDir/set_static_ip/static.ip.vbs
-
-cp $ApplicationsDir/start_ssh/sshd.vbs /mnt/c/ProgramData/Microsoft/Windows/Start\ Menu/Programs/StartUp/
-cp $ApplicationsDir/set_static_ip/static.ip.vbs /mnt/c/ProgramData/Microsoft/Windows/Start\ Menu/Programs/StartUp/
 cp ./windows/config.xlaunch /mnt/c/ProgramData/Microsoft/Windows/Start\ Menu/Programs/StartUp/
 cp ./windows/system.ahk /mnt/c/ProgramData/Microsoft/Windows/Start\ Menu/Programs/StartUp/
 
