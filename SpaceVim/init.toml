@@ -34,7 +34,7 @@
     bootstrap_before = 'myspacevim#before'
     bootstrap_after = 'myspacevim#after'
 
-    project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '!node_modules/', 'tsconfig.json']
+    project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '!node_modules/']
     project_rooter_outermost = false
 
 # Enable autocomplete layer
