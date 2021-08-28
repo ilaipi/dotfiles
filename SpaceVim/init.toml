@@ -34,6 +34,9 @@
     bootstrap_before = 'myspacevim#before'
     bootstrap_after = 'myspacevim#after'
 
+    project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '!node_modules/', 'tsconfig.json']
+    project_rooter_outermost = false
+
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
@@ -50,3 +53,20 @@ default_height = 30
 
 [[layers]]
     name = "lang#typescript"
+
+[[layers]]
+    name = "leaderf"
+
+[[layers]]
+    name = "denite"
+
+[[layers]]
+    name = "lsp"
+    filetypes = [
+      "javascript",
+      "html",
+      "css",
+      "typescript",
+      "sh",
+      "vue"
+    ]
