@@ -27,13 +27,13 @@ npm i -g vue-language-server \
 
 更新系统vim命令为nvim：
 ```
-# CUSTOM_NVIM_PATH=/usr/bin/nvim
-set -u
-sudo update-alternatives --install /usr/bin/ex ex "${CUSTOM_NVIM_PATH}" 110
-sudo update-alternatives --install /usr/bin/vi vi "${CUSTOM_NVIM_PATH}" 110
-sudo update-alternatives --install /usr/bin/view view "${CUSTOM_NVIM_PATH}" 110
-sudo update-alternatives --install /usr/bin/vim vim "${CUSTOM_NVIM_PATH}" 110
-sudo update-alternatives --install /usr/bin/vimdiff vimdiff "${CUSTOM_NVIM_PATH}" 110
+export PREFIX='/usr' 
+sudo sh -c "update-alternatives --install /usr/bin/editor editor $PREFIX/bin/nvim 1;
+update-alternatives --set editor $PREFIX/bin/nvim;
+update-alternatives --install /usr/bin/vim vim $PREFIX/bin/nvim 1;
+update-alternatives --set vim $PREFIX/bin/nvim;
+update-alternatives --install /usr/bin/vi vi $PREFIX/bin/nvim 1;
+update-alternatives --set vi $PREFIX/bin/nvim;"
 ```
 
 
