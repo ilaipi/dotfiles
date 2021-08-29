@@ -8,4 +8,4 @@
 - nerdtree 不支持 mv 经常不成功，也无法临时增加宽度
 
 
-# 
+# Deprecated
