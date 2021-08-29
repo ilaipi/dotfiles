@@ -38,6 +38,15 @@
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
+                "fontFace": "mononoki NF",
+                "fontSize": 14,
+                "colorScheme": "Solarized Dark",
+                "acrylicOpacity": 0.9,
+                "cursorColor": "#FFFFFF",
+                "cursorShape": "bar",
+                "padding": "0, 0, 0, 0",
+                "snapOnInput": true,
+                "useAcrylic": true,
                 "hidden": false
             },
             {
@@ -58,6 +67,15 @@
                 "hidden": false,
                 "name": "Ubuntu-20.04",
                 "source": "Windows.Terminal.Wsl",
+                "fontFace": "mononoki NF",
+                "fontSize": 14,
+                "colorScheme": "Solarized Dark",
+                "acrylicOpacity": 0.9,
+                "cursorColor": "#FFFFFF",
+                "cursorShape": "bar",
+                "padding": "0, 0, 0, 0",
+                "snapOnInput": true,
+                "useAcrylic": true,
                 "startingDirectory": "//wsl$/Ubuntu-20.04/home/billy"
             }
         ]
@@ -65,9 +83,52 @@
 
     // Add custom color schemes to this array.
     // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
-    "schemes": [],
+    "schemes": [
+        {
+            "background": "#282C34",
+            "black": "#282C34",
+            "blue": "#61AFEF",
+            "brightBlack": "#5A6374",
+            "brightBlue": "#61AFEF",
+            "brightCyan": "#56B6C2",
+            "brightGreen": "#98C379",
+            "brightPurple": "#C678DD",
+            "brightRed": "#E06C75",
+            "brightWhite": "#DCDFE4",
+            "brightYellow": "#E5C07B",
+            "cyan": "#56B6C2",
+            "foreground": "#DCDFE4",
+            "green": "#98C379",
+            "name": "One Half Dark",
+            "purple": "#C678DD",
+            "red": "#E06C75",
+            "white": "#DCDFE4",
+            "yellow": "#E5C07B"
+          },
+          {
+            "background": "#073642",
+            "black": "#073642",
+            "blue": "#268BD2",
+            "brightBlack": "#002B36",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cyan": "#2AA198",
+            "foreground": "#FDF6E3",
+            "green": "#859900",
+            "name": "Solarized Dark",
+            "purple": "#D33682",
+            "red": "#D30102",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+          }
+    ],
 
-    "fontFace": "MesloLGS NF",
+    "fontFace": "mononoki NF",
 
     // Add custom keybindings to this array.
     // To unbind a key combination from your defaults.json, set the command to "unbound".
