@@ -22,3 +22,17 @@ npm i -g vue-language-server \
 
 # For Mac
 @see README_Mac.md
+
+# nvim
+
+更新系统vim命令为nvim：
+```
+export PREFIX='/usr' 
+
+sudo sh -c "update-alternatives --install /usr/bin/editor editor $PREFIX/bin/nvim 1;
+update-alternatives --set editor $PREFIX/bin/nvim;
+update-alternatives --install /usr/bin/vim vim $PREFIX/bin/nvim 1;
+update-alternatives --set vim $PREFIX/bin/nvim;
+update-alternatives --install /usr/bin/vi vi $PREFIX/bin/nvim 1;
+update-alternatives --set vi $PREFIX/bin/nvim;"
+```
