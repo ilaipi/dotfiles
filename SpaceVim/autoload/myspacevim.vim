@@ -1,5 +1,6 @@
 function! myspacevim#before() abort
   let g:mapleader = ','
+  inoremap kj <Esc> 
 endfunction
 
 function! myspacevim#after() abort
