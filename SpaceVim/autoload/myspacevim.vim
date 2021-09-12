@@ -27,4 +27,6 @@ function! myspacevim#after() abort
 
   " Map ; to : and save a million keystrokes 用于快速进入命令行
   nnoremap ; :
+  " 去掉搜索高亮
+  noremap <silent><leader>/ :nohls<CR>
 endfunction
