@@ -17,6 +17,11 @@ npm i -g vue-language-server \
       vscode-html-languageserver-bin
 ```
 
+```
+# install zsh-proxy plugin
+git clone git@git.zhlh6.cn:SukkaW/zsh-proxy.git ~/.oh-my-zsh/custom/plugins/zsh-proxy
+```
+
 # For Ubuntu
 @see README_Ubuntu.md
 
