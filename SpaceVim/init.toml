@@ -61,6 +61,9 @@ default_height = 30
     name = "denite"
 
 [[layers]]
+    name = "tools"
+
+[[layers]]
     name = "lsp"
     filetypes = [
       "javascript",
