@@ -26,3 +26,4 @@ p10kDir="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 
 ln -sf $PWD/wsl/p10k.zsh ~/.p10k.zsh
 ln -sf $PWD/wsl/zshrc ~/.zshrc
+ln -sf $PWD/wsl/proxy.sh ~/.proxy.sh

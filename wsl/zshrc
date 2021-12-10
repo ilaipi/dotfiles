@@ -142,3 +142,5 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+alias clear_vim_swap="rm -f $HOME/.cache/SpaceVim/old/swap/*"
