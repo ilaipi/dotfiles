@@ -76,10 +76,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-proxy)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.proxy.sh set
+# source ~/.proxy.sh set
 
 # User configuration
 
@@ -143,4 +143,4 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-alias clear_vim_swap="rm -f $HOME/.cache/SpaceVim/old/swap/*"
+alias clear_vim_swap="rm -fr $HOME/.cache/nvim/backup/*"
