@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 
 # rm path/* silent (no confirm)
 setopt localoptions rmstarsilent
+setopt +o nomatch
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -144,3 +145,4 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 alias clear_vim_swap="rm -fr $HOME/.cache/nvim/backup/*"
+clear_vim_swap

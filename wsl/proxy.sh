@@ -13,6 +13,9 @@ set_proxy(){
     export HTTPS_proxy="${PROXY_HTTP}"
     git config --global http.proxy "${PROXY_HTTP}"
     git config --global https.proxy "${PROXY_HTTP}"
+
+    npm config set proxy ${PROXY_HTTP}
+    npm config set https-proxy ${PROXY_HTTP}
 }
 
 unset_proxy(){
@@ -22,6 +25,9 @@ unset_proxy(){
     unset HTTPS_PROXY
     git config --global --unset http.proxy
     git config --global --unset https.proxy
+
+    npm config delete proxy
+    npm config delete https-proxy
 }
 
 test_setting(){
