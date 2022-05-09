@@ -52,11 +52,11 @@ return
 ;按下ctrl + win + x等于按下ctrl + win +  F4
 
 
-!q::
-    send, {alt down}{f4}
-    sleep 50
-    send, {alt up}
-return
+; !q::
+;     send, {alt down}{f4}
+;     sleep 50
+;     send, {alt up}
+; return
 ;按下alt+ q等于按下alt + F4
 
 #w::
