@@ -2,6 +2,8 @@
 
 ### 普通终端
 
+在桌面或者任意文件夹中右击，然后点击：在终端中打开
+
 ```
 
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -51,8 +53,7 @@ Copy-Item -Path ".\Windows_Terminal_config.json" -Destination $env:LOCALAPPDATA\
 
 ```
 
-d:
-cd .\workspace\dotfiles
+cd .\dotfiles
 
 "D:\Scoop\Applications\apps\peazip\current\res\bin\zstd\zstd.exe" -d ".\zsh-5.9-2-x86_64.pkg.tar.zst" -o "D:\Scoop\Applications\apps\git\current\zsh-5.9-2-x86_64.pkg.tar" --long=31
 "D:\Scoop\Applications\apps\peazip\current\res\bin\7z\7z.exe" x -aos -bb0 -bse0 -bsp2 "-oD:\Scoop\Applications\apps\git\current\" -sccUTF-8 -snz "D:\Scoop\Applications\apps\git\current\zsh-5.9-2-x86_64.pkg.tar"
@@ -68,6 +69,8 @@ cd .\workspace\dotfiles
 
 ```
 
+cd /d/workspace/dotfiles
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install theme p10k
@@ -79,6 +82,7 @@ p10kDir="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 cd /d/workspace/dotfiles
 ln -sf $PWD/p10k.zsh ~/.p10k.zsh
 ln -sf $PWD/zshrc ~/.zshrc
+source ~/.zshrc
 
 ```
 
