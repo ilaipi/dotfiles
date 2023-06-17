@@ -30,13 +30,12 @@ npm install -g neovim
 
 ## Windows Terminal
 
+必须先关闭当前的终端，然后重新打开一个终端，字体文件才能生效，然后执行复制：
 
 ```
-bash
-cp Windows_Terminal_config.json %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+Copy-Item -Path ".\switch-to-zsh.sh" -Destination D:\Scoop\Applications\apps\git\current\usr\bin\
+Copy-Item -Path ".\Windows_Terminal_config.json" -Destination $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 ```
-
-
 
 
 ## install theme p10k
