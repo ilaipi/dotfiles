@@ -52,14 +52,14 @@
         "list": 
         [
             {
-                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe --login switch-to-zsh.sh",
+                "commandline": "D:\\Scoop\\Applications\\apps\\git\\current\\bin\\bash.exe --login switch-to-zsh.sh",
                 "font": 
                 {
                     "face": "Cousine Nerd Font",
                     "size": 14.0
                 },
                 "guid": "{8d0fbf11-8100-49f5-9f5c-2b6e61f7224c}",
-                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "icon": "D:\\Scoop\\Applications\\apps\\git\\current\\mingw64\\share\\git\\git-for-windows.ico",
                 "name": "Git Bash",
                 "startingDirectory": "D:\\workspace"
             },

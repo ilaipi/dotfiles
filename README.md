@@ -3,50 +3,40 @@
 ### 普通终端
 
 ```
+
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh -outfile 'install.ps1'
 .\install.ps1 -ScoopDir 'D:\Scoop\Applications' -ScoopGlobalDir 'D:\Scoop\Global' -NoProxy
-```
-
-### 管理员终端
-
-```
-scoop install git --global
-```
-
-### 普通终端
-
-```
+scoop install git
 scoop bucket add versions
 scoop bucket add nerd-fonts
 scoop bucket add extras
-```
+scoop install nodejs18
+scoop install nodejs16
+scoop install python27
+scoop install python311
+scoop install firacode-nf
+scoop install Cousine-NF
+scoop install peazip
+scoop install ripgrep
+scoop install lazygit
+scoop install neovim
 
-### 管理员终端
+pip install neovim
+npm install -g neovim
 
-```
-scoop install nodejs18 --global
-scoop install nodejs16 --global
-scoop install python27 --global
-scoop install python311 --global
-scoop install firacode-nf --global
-scoop install Cousine-NF --global
-scoop install peazip --global
-```
 
-### 普通用户  命令行模式
-
-命令提示符 窗口，进入当前目录，执行：
-
-```
-"D:\Scoop\Global\apps\peazip\current\res\bin\zstd\zstd.exe" -d ".\zsh-5.9-2-x86_64.pkg.tar.zst" -o "D:\Scoop\Global\apps\git\current\zsh-5.9-2-x86_64.pkg.tar" --long=31
-"D:\Scoop\Global\apps\peazip\current\res\bin\7z\7z.exe" x -aos -bb0 -bse0 -bsp2 "-oD:\Scoop\Global\apps\git\current\" -sccUTF-8 -snz "D:\Scoop\Global\apps\git\current\zsh-5.9-2-x86_64.pkg.tar"
-"D:\Scoop\Global\apps\peazip\current\pea.exe" WIPE RECYCLE "D:\Scoop\Global\apps\git\current\zsh-5.9-2-x86_64.pkg.tar"
 ```
 
 ## Windows Terminal
 
+
+```
+bash
 cp Windows_Terminal_config.json %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+```
+
+
 
 
 ## install theme p10k
@@ -54,4 +44,11 @@ cp Windows_Terminal_config.json %LOCALAPPDATA%\Packages\Microsoft.WindowsTermina
 p10kDir="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 [ -d "$p10kDir" ] && git -C "$p10kDir" pull
 [ ! -d "$p10kDir" ] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$p10kDir"
+
+
+## nodejs global packages
+
+```
+npm list -g --depth=0 > global_npm.txt && sed -i '' 's/├── //g' global_npm.txt && sed -i '' 's/└── //g' global_npm.txt && sed -i '' 's/\/usr\/local\/lib//g' global_npm.txt && sed -i '' '/^[[:space:]]*$/d' global_npm.txt && rm global_npm.sh; touch global_npm.sh && cat global_npm.txt | while read line; do echo "npm install -g "${line} >> global_npm.sh; done && chmod 755 global_npm.sh && rm global_npm.txt
+```
 
