@@ -50,6 +50,7 @@ Copy-Item -Path ".\switch-to-zsh.sh" -Destination $ScoopDir\apps\git\current\usr
 
 $sourcePath = (Get-Item -Path .\zshrc).FullName
 $destinationPath = "$env:USERPROFILE\.zshrc"
+Remove-Item -Path "$destinationPath"
 sudo New-Item -ItemType SymbolicLink -Path $destinationPath -Target $sourcePath
 
 $sourcePath = (Get-Item -Path .\p10k.zsh).FullName
