@@ -4,6 +4,7 @@ $ScoopGlobalDir = "D:\Scoop\Global"
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh -outfile 'install.ps1'
 .\install.ps1 -ScoopDir "$ScoopDir" -ScoopGlobalDir "$ScoopGlobalDir" -NoProxy
+Remove-Item -Path ".\install.ps1"
 scoop install git
 scoop bucket add versions
 scoop bucket add nerd-fonts

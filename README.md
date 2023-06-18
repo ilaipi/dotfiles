@@ -1,6 +1,16 @@
-## Install
+## Typical Installation
 
+在桌面右击, 点击 在终端中打开：
 
+```
+irm https://dotfiles-olive.vercel.app/install.ps1 | iex
+```
+
+## Manual Install
+
+在桌面右击, 点击 在终端中打开。
+
+然后复制 `install.ps1` 文件内容，黏贴到终端中，自动完成安装。
 
 ## nodejs global packages
 
@@ -12,3 +22,10 @@ npm list -g --depth=0 > global_npm.txt && sed -i '' 's/├── //g' global_npm
 
 - 先在要同步的版本，执行这个命令，生成 global_npm.sh
 - 然后切换到目标版本，执行生成的 global_npm.sh
+
+## Inspired
+
+[how-to-add-git-bash-to-windows-terminal](https://walterteng.com/how-to-add-git-bash-to-windows-terminal)
+[using-zsh-on-windows](https://walterteng.com/using-zsh-on-windows)
+[Panes in Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/panes)
+[让 Windows 更加适合开发](https://blog.oldshensheep.com/note/lindows/)
