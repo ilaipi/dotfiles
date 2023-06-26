@@ -25,6 +25,19 @@ npm list -g --depth=0 > global_npm.txt && sed -i '' 's/├── //g' global_npm
 - 先在要同步的版本，执行这个命令，生成 global_npm.sh
 - 然后切换到目标版本，执行生成的 global_npm.sh
 
+## Others to install
+
+```shell
+
+scoop install extras/context-menu-manager
+scoop install extras/ccleaner
+scoop install extras/android-studio
+scoop install extras/copyq
+scoop install extras/another-redis-desktop-manager
+scoop install extras/postman
+
+```
+
 
 
 ## Inspired
