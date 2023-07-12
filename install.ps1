@@ -9,8 +9,7 @@ scoop install git
 scoop bucket add versions
 scoop bucket add nerd-fonts
 scoop bucket add extras
-scoop install nodejs16
-scoop install nodejs18
+scoop install nvm
 scoop install python27
 scoop install python311
 scoop install firacode-nf
