@@ -20,6 +20,12 @@ scoop install ripgrep
 scoop install lazygit
 scoop install neovim
 scoop install gsudo
+scoop install zig
+scoop install gcc
+scoop install context-menu-manager
+scoop install ccleaner
+scoop install another-redis-desktop-manager
+scoop install postman
 
 pip install neovim
 npm install -g neovim
