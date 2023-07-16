@@ -25,11 +25,19 @@ scoop install context-menu-manager
 scoop install ccleaner
 scoop install another-redis-desktop-manager
 scoop install postman
+scoop install pwsh
+scoop install oh-my-posh
 
 pip install neovim
 npm install -g neovim
 
 New-Item -ItemType Directory -Path "D:\workspace" | Set-Location
+Install-Module PSReadLine
+$sourcePath = (Get-Item -Path .\Microsoft.PowerShell_profile.ps1).FullName
+$destinationPath = "$env:PROFILE"
+Remove-Item -Path "$destinationPath"
+sudo New-Item -ItemType SymbolicLink -Path $destinationPath -Target $sourcePath
+
 
 git clone https://github.com/ilaipi/dotfiles.git
 
