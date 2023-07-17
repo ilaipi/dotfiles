@@ -40,7 +40,7 @@ cd dotfiles
 # Powershell
 Install-Module PSReadLine
 $sourcePath = (Get-Item -Path .\Microsoft.PowerShell_profile.ps1).FullName
-$destinationPath = "$PROFILE"
+$destinationPath = "$PSHOME\Microsoft.PowerShell_profile.ps1"
 $folderPath = Split-Path -Path $destinationPath -Parent
 if (-not (Test-Path -Path $folderPath -PathType Container)) {
     # 文件夹不存在，创建文件夹
