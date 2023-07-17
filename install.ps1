@@ -32,16 +32,23 @@ pip install neovim
 npm install -g neovim
 
 New-Item -ItemType Directory -Path "D:\workspace" | Set-Location
-Install-Module PSReadLine
-$sourcePath = (Get-Item -Path .\Microsoft.PowerShell_profile.ps1).FullName
-$destinationPath = "$env:PROFILE"
-Remove-Item -Path "$destinationPath"
-sudo New-Item -ItemType SymbolicLink -Path $destinationPath -Target $sourcePath
-
 
 git clone https://github.com/ilaipi/dotfiles.git
 
 cd dotfiles
+
+# Powershell
+Install-Module PSReadLine
+$sourcePath = (Get-Item -Path .\Microsoft.PowerShell_profile.ps1).FullName
+$destinationPath = "$PROFILE"
+$folderPath = Split-Path -Path $destinationPath -Parent
+if (-not (Test-Path -Path $folderPath -PathType Container)) {
+    # 文件夹不存在，创建文件夹
+    New-Item -Path $folderPath -ItemType Directory | Out-Null
+    Write-Host "文件夹已创建：$folderPath"
+}
+Remove-Item -Path "$destinationPath"
+sudo New-Item -ItemType SymbolicLink -Path $destinationPath -Target $sourcePath
 
 $sourcePath = ".\zsh-5.9-2-x86_64.pkg"
 $destinationPath = "$ScoopDir\apps\git\current"
