@@ -70,4 +70,7 @@ $sourcePath = (Get-Item -Path .\p10k.zsh).FullName
 $destinationPath = "$env:USERPROFILE\.p10k.zsh"
 sudo New-Item -ItemType SymbolicLink -Path $destinationPath -Target $sourcePath
 
-Copy-Item -Path ".\Windows_Terminal_config.json" -Destination $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+$sourcePath = (Get-Item -Path .\Windows_Terminal_config.json).FullName
+$destinationPath = $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+Remove-Item -Path "$destinationPath"
+sudo New-Item -ItemType SymbolicLink -Path $destinationPath -Target $sourcePath
