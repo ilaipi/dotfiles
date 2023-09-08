@@ -17,6 +17,20 @@ irm https://dotfiles-olive.vercel.app/install.ps1 | iex
 
 然后复制 `install.ps1` 文件内容，黏贴到终端中，自动完成安装。
 
+## Oh My Posh
+
+Theme: set in `Microsoft.PowerShell_profile.ps1`
+
+如果需要开启新pane的时候，和当前pane保持相同的目录，需要找到theme文件，修改配置。
+
+theme文件路径：`AppData\Local\Programs\oh-my-posh\themes`
+
+在 `"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",` 下面新增：
+
+`"pwd": "osc99",`
+
+再次打开新pane的时候自动会在当前目录。（不需要其它操作）
+
 
 
 ## Sync nodejs global packages
