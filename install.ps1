@@ -27,6 +27,7 @@ scoop install another-redis-desktop-manager
 scoop install postman
 scoop install pwsh
 scoop install oh-my-posh
+scoop install extras/unlocker
 
 pip install neovim
 npm install -g neovim
