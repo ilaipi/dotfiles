@@ -9,7 +9,7 @@ scoop install git
 scoop bucket add versions
 scoop bucket add nerd-fonts
 scoop bucket add extras
-scoop install nvm
+scoop install fnm
 scoop install python27
 scoop install python311
 scoop install firacode-nf

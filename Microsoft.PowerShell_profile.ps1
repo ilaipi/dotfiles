@@ -17,5 +17,8 @@ Run-Step "PSReadline" {
   Set-PSReadLineOption -EditMode Emacs
 }
 
+if (Get-Command fnm -ErrorAction SilentlyContinue) {
+  fnm env --use-on-cd | Out-String | Invoke-Expression
+}
 
-
+Clear-Host
