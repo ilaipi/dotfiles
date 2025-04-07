@@ -31,7 +31,12 @@ theme文件路径：`AppData\Local\Programs\oh-my-posh\themes`
 
 再次打开新pane的时候自动会在当前目录。（不需要其它操作）
 
+## vscode等
+在vscode(cursor/trae)中的终端，新建终端后，可以配置终端，修改终端的路径为 `C:\Program Files\PowerShell\7\pwsh.exe`
 
+然后需要修改终端字体，搜索 `@feature:terminal font` ，修改为 `FiraCode Nerd Font` 或者 `Cousine Nerd Font`
+
+这样在编辑器中打开的终端就和用 windows terminal 保持一致了。
 
 ## Sync nodejs global packages
 

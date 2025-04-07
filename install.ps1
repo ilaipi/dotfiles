@@ -5,6 +5,9 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh -outfile 'install.ps1'
 .\install.ps1 -ScoopDir "$ScoopDir" -ScoopGlobalDir "$ScoopGlobalDir" -NoProxy
 Remove-Item -Path ".\install.ps1"
+
+winget install --id Microsoft.PowerShell --source winget
+
 scoop install git
 scoop bucket add versions
 scoop bucket add nerd-fonts
@@ -25,7 +28,6 @@ scoop install context-menu-manager
 scoop install ccleaner
 scoop install another-redis-desktop-manager
 scoop install postman
-scoop install pwsh
 scoop install oh-my-posh
 scoop install extras/unlocker
 
@@ -41,15 +43,14 @@ cd dotfiles
 # Powershell
 Install-Module PSReadLine
 $sourcePath = (Get-Item -Path .\Microsoft.PowerShell_profile.ps1).FullName
-$destinationPath = "$PSHOME\Microsoft.PowerShell_profile.ps1"
-$folderPath = Split-Path -Path $destinationPath -Parent
-if (-not (Test-Path -Path $folderPath -PathType Container)) {
-    # 文件夹不存在，创建文件夹
-    New-Item -Path $folderPath -ItemType Directory | Out-Null
-    Write-Host "文件夹已创建：$folderPath"
+$destinationPath = $PROFILE.AllUsersAllHosts
+
+if (Test-Path -Path $destinationPath) {
+    Write-Host "软链接已存在：$destinationPath"
+    gsudo Remove-Item -Path `"$destinationPath`"
 }
-Remove-Item -Path "$destinationPath"
-sudo New-Item -ItemType SymbolicLink -Path $destinationPath -Target $sourcePath
+Write-Host "创建软链接：$destinationPath -> $sourcePath"
+gsudo New-Item -ItemType SymbolicLink -Path `"$destinationPath`" -Target `"$sourcePath`"
 
 $sourcePath = ".\zsh-5.9-2-x86_64.pkg"
 $destinationPath = "$ScoopDir\apps\git\current"
@@ -65,11 +66,11 @@ Copy-Item -Path ".\switch-to-zsh.sh" -Destination $ScoopDir\apps\git\current\usr
 $sourcePath = (Get-Item -Path .\zshrc).FullName
 $destinationPath = "$env:USERPROFILE\.zshrc"
 Remove-Item -Path "$destinationPath"
-sudo New-Item -ItemType SymbolicLink -Path $destinationPath -Target $sourcePath
+gsudo New-Item -ItemType SymbolicLink -Path $destinationPath -Target $sourcePath
 
 $sourcePath = (Get-Item -Path .\p10k.zsh).FullName
 $destinationPath = "$env:USERPROFILE\.p10k.zsh"
-sudo New-Item -ItemType SymbolicLink -Path $destinationPath -Target $sourcePath
+gsudo New-Item -ItemType SymbolicLink -Path $destinationPath -Target $sourcePath
 
 $sourcePath = (Get-Item -Path .\Windows_Terminal_config.json).FullName
 $destinationPath = $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
